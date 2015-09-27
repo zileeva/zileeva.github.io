@@ -9,7 +9,7 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 
 	$stateProvider
 		.state('instagram-hashtag', {
-			url: "/instagram-hashtag", templateUrl: 'instagram-hashtag/main.html', controller: 'InstagramHashtag'
+			url: "/instagram-hashtag", templateUrl: 'public/instagram-hashtag/main.html', controller: 'InstagramHashtag'
 		});
 
 })
