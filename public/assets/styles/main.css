@@ -1,0 +1,145 @@
+body {
+	margin: 0;
+	font-family: "Lantinghei TC";
+}
+
+.container-fluid {
+	width: 80%;
+}
+
+.navbar {
+    border-radius: 0px !important;
+    border: none !important;
+    border-bottom: 1px solid rgb(163, 158, 151) !important;
+    background-color: #fff !important
+}
+
+.navbar {
+	color: rgb(85,89,93);
+}
+
+h3, h4, h5 {
+	font-weight: 200;
+}
+
+a {
+	color: rgb(85,89,93);
+}
+
+.col-md-4 {
+    padding: 0 !important;
+}
+
+.row {
+    margin: 0 !important;
+}
+
+.container i {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.square-box{
+    position: relative;
+}
+
+.square-box:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.square-content{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.square-content {
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+.square-content span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.content {
+    margin-top: 70px;
+}
+
+.content-b, .content-g, .content-y {
+    -webkit-animation: background-color 0.3s ease-in;
+    -moz-animation: background-color 0.3s ease-in;
+    -ms-animation: background-color 0.3s ease-in;
+    -o-animation: background-color 0.3s ease-in;
+    transition: background-color 0.3s ease-in;
+}
+
+.content-b:hover, .content-g:hover, .content-y:hover {
+    background-color: transparent;
+    background-size: cover;
+/*    -webkit-animation: fadeIn 0.5s ease-in both;
+    -moz-animation: fadeIn 0.5s ease-in both;
+    -ms-animation: fadeIn 0.5s ease-in both;
+    -o-animation: fadeIn 0.5s ease-in both;
+    animation: fadeIn 0.5s ease-in both;*/
+}
+
+.content-y {
+    background-color: #FFDF67;
+}
+
+.content-y:hover {
+    background-image: url('../images/mavrck.png');  
+}
+
+.content-g {
+    background-color: #9FECC9;
+}
+
+.content-g:hover {
+    background-image: url('../images/dog.png');
+}
+
+.content-b {
+    background-color: #5B9DDC;
+}
+
+.content-b:hover {
+    background-image: url('../images/instagram.png');
+}
+
+
+
+.fadeIn {
+    -webkit-animation: fadeIn 0.5s ease-in both;
+    -moz-animation: fadeIn 0.5s ease-in both;
+    -ms-animation: fadeIn 0.5s ease-in both;
+    -o-animation: fadeIn 0.5s ease-in both;
+    animation: fadeIn 0.5s ease-in both;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+@-moz-keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+@-ms-keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+@-o-keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}  

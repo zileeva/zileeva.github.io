@@ -1,9 +1,22 @@
+var express = require('express')
+   ,request = require('request');
 
 var mysql = require('./config/mysql.js');
 var post = require('./modules/Post.js');
 var hashtag = require('./modules/Hashtag.js');
 var user = require('./modules/User.js');
 var async = require('async');
+
+
+//var report = require('./modules/report.js');
+
+
+var app = express();
+// configure Express
+app.use(express.static(__dirname + '/'));
+
+app.listen(3000);
+console.log("Running at Port 3000");
 
 
 // mysql.conn.query('select * from Instagram.posts', function(err, res) {
@@ -104,6 +117,7 @@ function postsInit() {
         else {
           console.log('no tags')
         }
+      }
     }
   })
 
@@ -133,4 +147,4 @@ function postsInit() {
 
 }
 
-postsInit();
+//postsInit();

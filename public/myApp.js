@@ -7,7 +7,12 @@ var myApp = angular.module('myApp', [
 
 myApp.config(function($stateProvider, $urlRouterProvider) {
 
+	$urlRouterProvider.otherwise("/me");
+
 	$stateProvider
+		.state('home', {
+			url: "/me", templateUrl: 'public/home/home.html', controller: 'Home'
+		})
 		.state('instagram-hashtag', {
 			url: "/instagram-hashtag", templateUrl: 'public/instagram-hashtag/main.html', controller: 'InstagramHashtag'
 		});
@@ -18,9 +23,7 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 	
 });
 
-myApp.controller('InstagramHashtag', ['$scope', function($scope) {
-	console.log("InstagramHashtag controller is activated")
-}])
+
 
 
 
