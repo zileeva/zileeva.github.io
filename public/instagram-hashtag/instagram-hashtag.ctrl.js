@@ -1,3 +1,3 @@
-myApp.controller('InstagramHashtag', ['$scope', function($scope) {
+myApp.controller('InstagramHashtag', ['$scope', '$http', '$window', function($scope, $http, $window) {
 	console.log("InstagramHashtag controller is activated")
 }])
