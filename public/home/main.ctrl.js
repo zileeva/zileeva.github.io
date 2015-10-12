@@ -1,3 +1,5 @@
+// linked in index.html - NEEDS TO BE LINKED 
+
 myApp.controller('Home', ['$scope', function($scope) {
 	console.log("Home controller is activated");
 	

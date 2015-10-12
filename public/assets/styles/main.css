@@ -293,3 +293,11 @@ img {
     opacity: 1;
 }*/
 
+
+.photo {
+    width: 200px !important; 
+    height: 200px !important; 
+    position: relative; 
+    background-size: cover;
+}
+
