@@ -1,3 +1,5 @@
+
+
 body {
 	margin: 0;
 	font-family: 'brownlight', sans-serif;
@@ -53,6 +55,38 @@ img {
 .container {
     margin-top: 30px;
     margin-bottom: 30px;
+
+}
+
+.ig-container {
+    background-image: url('../images/beautiful.jpg'); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 50px;
+    height: 300px;
+
+}
+
+.ig-container h1 {
+    color: White;
+    font-family: Oxygen;
+    font-size: 60px !important;
+/*    background-color: rgba(0,0,0,0.4);*/
+
+
+}
+
+.ig-container h4 {
+    color: White;
+    font-family: Oxygen;
+}
+   
+
+.ig-container a {
+    color: White;
+    font-family: Oxygen;
+   
 }
 
 .content i {
@@ -131,7 +165,7 @@ img {
     visibility: visible !important;
 }*/
 
-/*.overlay {
+.overlay {
     top: 0;
     left: 0;
     right: 0;
@@ -142,8 +176,9 @@ img {
     -moz-transition: all 0.3s;
     -webkit-transition: all 0.3s;
     transition: all .3s;
-    background-color: rgba(0,0,0,1);
-}*/
+    background-color: rgba(0,0,0,0.15);
+    height: 300px;
+}
 /*.content-g:hover .overlay, .content-b:hover .overlay, .content-y:hover .overlay {
     background-color: rgba(255, 255, 255, 0.45);    
 }*/
@@ -299,5 +334,10 @@ img {
     height: 200px !important; 
     position: relative; 
     background-size: cover;
+}
+
+.input {
+    height: 50px;
+    width: 300px;
 }
 
