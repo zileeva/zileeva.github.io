@@ -42,6 +42,11 @@ img {
     width: 100%;
     position: absolute;
 }
+
+.input {
+    height: 50px;
+    width: 300px;
+}
 .col-md-4 {
     padding: 0 !important;
 }
@@ -193,6 +198,7 @@ img {
     transition: background-color .4s cubic-bezier(0.19,1,.22,1);
     overflow: hidden;
     display: inline-block;
+    cursor: pointer;
 }
 
 .btn-main:hover:after {
@@ -292,4 +298,12 @@ img {
 .btn-main:hover .y-image {
     opacity: 1;
 }*/
+
+
+.photo {
+    width: 200px !important; 
+    height: 200px !important; 
+    position: relative; 
+    background-size: cover;
+}
 

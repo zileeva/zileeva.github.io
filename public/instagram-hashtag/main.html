@@ -1,5 +1,23 @@
-<div class="container">
+<div class="container" style="text-align:center;">
 	<h1>How Hot Is Your Hashtag?</h1>
 
 	<h4>Enter location to see which hashtags are trending there right now</h4>
+
+	<!-- <a href="" ng-click="high()">click</a></br> -->
+
+	<input type="text" class="input" ng-model="city">
+	<a href ng-click="calculate(city)">DO IT</a>
+
+	<div style="bottom: 0; position: fixed;">
+		<div ng-repeat="photo in popularImages" style="display: inline-block;">
+			<div class="photo"style="background-image: url('{{photo}}');">
+			</div>
+		</div>
+	</div>
+
+	<div ng-repeat="(tag, value) in hashtags | orderBy:'score'">
+		{{tag}}
+		{{value}}
+	</div>
+
 </div>

@@ -1,28 +1,33 @@
+// linked in index.html - NEEDS TO BE LINKED 
+
 myApp.controller('Home', ['$scope', function($scope) {
 	console.log("Home controller is activated");
 	
 	$('#content-me').css({'opacity': '0.7'})
 	$('#desc-me').css({'opacity': '1'})
 
-   $(".content-g").mousewheel(function(event, delta) {
+   // $(".content-g").mousewheel(function(event, delta) {
 
-      this.scrollLeft -= (delta * 30);
+   //    this.scrollLeft -= (delta * 30);
     
-      event.preventDefault();
+   //    event.preventDefault();
 
-   });
+   // });
+
+	var contents = ['content-g', 'content-y', 'content-b']
 
 	$scope.addOpacity = function(id, id2) {
 		$('#content-me').css({'opacity': '0'})
 		$('#desc-me').css({'opacity': '0'})
 		//$('.box').addClass("box-change");
 
-		    var hidden = $('.' + id);
-			    // if (hidden.hasClass('visible')){
-			    //     hidden.animate({"left":"-1000px"}, "slow").removeClass('visible');
-			    // } else {
-			        hidden.animate({"right":"0px"}, 500, $.bez([0,0,0.6,1])).addClass('visible');
-			    //}
+		for (var i = 0; i < contents.length; i++) {
+			var hidden = $('.' + contents[i]);
+		    hidden.animate({"right":"-1000px"}, 200, $.bez([0,0,0.6,1])).removeClass('visible');
+		}
+
+		var show = $('.' + id);
+		show.animate({"right":"0px"}, 200, $.bez([0,0,0.6,1])).addClass('visible');
 
 		$('#' + id).css({'opacity': '0.7'})
 		$('#' + id2).css({'opacity': '1'})

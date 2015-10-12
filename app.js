@@ -1,3 +1,6 @@
+// RUNS SERVER  
+//Linking stuff that we are using 
+
 var express = require('express')
    ,request = require('request');
 
@@ -11,17 +14,27 @@ var async = require('async');
 //var report = require('./modules/report.js');
 
 
-var app = express();
+var app = express();                               // express is a thing in node that runs your app 
 // configure Express
-app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/'));         // linking all of your files there - in the folder 
 
-app.listen(3000);
+// Allow Angular to be able to post data to our API - added after error "No 'Access-Control-Allow-Origin' header is present on the requested resource."
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Cache-Control, Pragma, Origin, Authorization, Content-Type, X-Requested-With');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
+
+app.listen(3000);                                 // port number (you can put any port in)
 console.log("Running at Port 3000");
 
 
 // mysql.conn.query('select * from Instagram.posts', function(err, res) {
 //   console.log(res)
 // })
+
 
 function getUser(user_id, cb) {
 	user.getUser(user_id, function(err, res) {

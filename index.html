@@ -22,10 +22,26 @@
 	    <script type="text/javascript" src="public/myApp.js"></script>
 	    <script type="text/javascript" src="public/instagram-hashtag/instagram-hashtag.ctrl.js"></script>
 	    <script type="text/javascript" src="public/home/main.ctrl.js"></script>
+	    <script type="text/javascript" src="public/instagram-hashtag/insta.svc.js"></script>
+	    <script type="text/javascript" src="public/instagram-hashtag/map.svc.js"></script>
 
 	
 	</head>
-	<body ng-app="myApp">
-		<div ui-view></div>
+	<body ng-app="myApp">      <!--  directive  - under myApp.js HERE IS WHERE HAS TO BE THE SAME NAME -->
+		 <div ui-view></div>   <!-- UI-VIEW IS A custom directive defined in ui.router (myApp.js)   -->
 	</body>
 </html>
+
+
+<!-- Dont link html files because Angular takes care of it - you give your html to Angular not this file (takes care of that) -->
+
+<!-- directive, controllers, services 
+
+controllers control certain parts of your html of your website - divide controllers based on different parts of your websties - "this controller will control about page, or this other page... OR can just be smaller elements on page" 
+
+directives - html tags that include a lot of functionality, as well as native html elements ex. on notebook 
+custom directives in angular -
+ ng-app: how app starts -> this is the name that angular will look for  (can call it whatever you want)  
+
+
+ services - serves contnroller(s) and has functions that are similar to what they are doing - if you have a bunch of functions that talk to facebook you put it in one service - use these functions wherever you want SERVICES GET INJECTED ->
