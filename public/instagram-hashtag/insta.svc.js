@@ -69,6 +69,7 @@ myApp.factory('insta', function ($http, $rootScope, mapG) {    //rootScope - con
 
 
 
+
 		}
 
 
