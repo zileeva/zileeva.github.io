@@ -117,6 +117,8 @@ $scope.calculate = function(location) {
 	$scope.displayedHashtags = []
 	insta.getPostsByLocation(G_API_KEY, location, ACCESS_TOKEN, function(err, res) {
 		if (res) {
+			$scope.city = res.formatted_address;
+			console.log($scope.city)
 			initCalculation(res.data);
 		}
 	})

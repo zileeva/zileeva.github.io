@@ -34,11 +34,11 @@ myApp.factory('insta', function ($http, $rootScope, mapG) {    //rootScope - con
 					var lng = data.geometry.location.lng;
 					var max_timestamp = Math.floor(Date.now() / 1000) - 3600;
 					var min_timestamp = Math.floor(Date.now() / 1000) - 3*3600;
-					console.log(min_timestamp)
+					var formatted_address = data.formatted_address;
 					var url = "https://api.instagram.com/v1/media/search?lat=" + lat + "&lng=" + lng + "&max_timestamp=" + max_timestamp + "&min_timestamp=" + min_timestamp + "&distance=5000&access_token=" + access_token + "&callback=JSON_CALLBACK";
 					$http.jsonp(url)
 					.success(function (data) {
-						console.log(data)
+						data.formatted_address = formatted_address;
 						cb(null, data);
 
 					})
