@@ -10,9 +10,13 @@ $scope.popularImages = [];
 $scope.city = "";
 
 
-var posts = []
+var posts = [];
 
-$scope.hashtags = {}
+$scope.hashtags = {};
+
+$scope.displayedHashtags = [];
+
+$scope.maxScore = 0;
 
 $scope.high = function() {
 	insta.getPopularPosts(ACCESS_TOKEN, function(err, response){
@@ -31,8 +35,18 @@ $scope.high = function() {
 	}) 
  }
 
-
-
+function sortHashtags() {
+	$scope.maxScore = 0;
+	angular.forEach($scope.hashtags, function(tag, key) {
+		if (tag.score > $scope.maxScore) $scope.maxScore = tag.score;
+	})
+	angular.forEach($scope.hashtags, function(tag, key) {
+		$scope.displayedHashtags.push({tag: key, score_style: Math.ceil((tag.score / $scope.maxScore) * 5), score: tag.score, count: tag.count, post_urls: tag.post_urls})
+	})
+	console.log($scope.maxScore)
+	console.log($scope.displayedHashtags)
+}
+//$scope.testing = [{tag: 'mam', score: 5, count: 56}, {tag: 'jk', score: 675, count: 56}, {tag: 're', score: 7, count: 56}, {tag: 'aa', score: 15, count: 56}]
 function updateHashtags(tags, post) {
 	angular.forEach(tags, function(tag, key) {
 		if (!($scope.hashtags.hasOwnProperty(tag))) {
@@ -43,7 +57,7 @@ function updateHashtags(tags, post) {
 	angular.forEach(tags, function(tag, key) {
 		$scope.hashtags[tag].score = scoreHashtag(tag, post);
 		$scope.hashtags[tag].count = $scope.hashtags[tag].count + 1;
-		$scope.hashtags[tag].post_urls.push(post.url)
+		$scope.hashtags[tag].post_urls.push({url: post.url, image: post.image})
 	})
 }
 
@@ -52,13 +66,14 @@ function insertPosts(data, cb) {
 
 		if (value.tags.length > 0) {
 			
-			insta.getUserInformation(ACCESS_TOKEN, value.user.id, function(err, response){
-				var followers = response.counts.followed_by;
+			// insta.getUserInformation(ACCESS_TOKEN, value.user.id, function(err, response){
+			// 	var followers = response.counts.followed_by;
 		
-				var post_score = (value.likes.count + 2 * value.comments.count) / followers
+				var post_score = (value.likes.count + 2 * value.comments.count) / value.tags.length // / followers
 				var post = {"post_id": value.id, 
 							"user_id": value.user.id,
 							"url": value.link,
+							"image": value.images.thumbnail.url,
 							"likes_count": value.likes.count,
 							"comments_count": value.comments.count,
 							"tags": value.tags,
@@ -68,7 +83,7 @@ function insertPosts(data, cb) {
 
 				updateHashtags(value.tags, post)
 
-			})
+			//})
 
 		} else {
 			console.log("no tags :(")
@@ -83,26 +98,35 @@ function insertPosts(data, cb) {
 }
 
 function scoreHashtag (tag, post) {	
-	var sumPostScore = $scope.hashtags[tag].score * $scope.hashtags[tag].count; //b4 incrementing
+	var sumPostScore = $scope.hashtags[tag].score //* $scope.hashtags[tag].count; //b4 incrementing
 	sumPostScore += post.post_score;
-	return sumPostScore / ($scope.hashtags[tag].count + 1);
+	return sumPostScore // / ($scope.hashtags[tag].count + 1);
 };
 
 function initCalculation(data) {
 	insertPosts(data, function() {
-		console.log(posts)
-		console.log($scope.hashtags)
+		sortHashtags()
 	});
 
 	
 }
 
 $scope.calculate = function(location) {
+	posts = []
+	$scope.hashtags = {}
+	$scope.displayedHashtags = []
 	insta.getPostsByLocation(G_API_KEY, location, ACCESS_TOKEN, function(err, res) {
 		if (res) {
 			initCalculation(res.data);
 		}
 	})
 }
+
+$("#locationEnter").keydown(function(event) {
+
+	if(event.keyCode==13){
+		$scope.calculate($scope.city)
+	}
+})
 
 }])
