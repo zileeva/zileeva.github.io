@@ -1,9 +1,6 @@
 'use strict'; //? 
 
-myApp.factory('insta', function ($http, $rootScope, mapG) {    //rootScope - controls the whole website - 
-														// knows about all the scopes- if you want some 
-														//scope function to be available to all html controllers, 
-														// use rootScope (not recommended - rather right a service & inject it)
+myApp.factory('insta', function ($http, $rootScope, mapG) { 
 
 	return {
 		getPopularPosts: function(access_token, cb) {
@@ -21,7 +18,6 @@ myApp.factory('insta', function ($http, $rootScope, mapG) {    //rootScope - con
 			}) 
 
 
-			// cb() call backs - functions (notebook) cb(error (if all well then null), response)
 
 		},
 
@@ -66,13 +62,7 @@ myApp.factory('insta', function ($http, $rootScope, mapG) {    //rootScope - con
 				console.log("Error getting Instagram User Information", data, error);
 				cb("Error getting Instagram User Information", data);
 			}) 
-
-
-
-
 		}
-
-
 
 	}
 	

@@ -1,40 +1,10 @@
 <div class="container ig-container" style="text-align:center; padding: 0; width: 100%;">
-
-<!-- 		<div class="overlay" style="text-align:center; margin: 0;
-    padding: 0;
-    width: 50%; height: 50%; align: center;"></div> -->
-
-		<h1>How Hot Is Your Hashtag?</h1>
-
-		<!-- <h4>Enter location to see which hashtags are trending there right now</h4> -->
-
-		<!-- <a href="" ng-click="high()">click</a></br> -->
-
-		<input type="text" id="locationEnter" class="input text-uppercase" placeholder="Enter location" ng-model="city"></br>
-		<!-- <a href ng-click="calculate(city)">DO IT</a> -->
-
-	
-
-
-
-
-
-<!-- <div style="bottom: 0; position: fixed;">
-<div ng-repeat="photo in popularImages" style="display: inline-block;">
-<div class="photo"style="background-image: url('{{photo}}');">
-</div>
-</div> -->
+	<h1>How Hot Is Your Hashtag?</h1>
+	<input type="text" id="locationEnter" class="input text-uppercase" placeholder="Enter location" ng-model="city"></br>
 
 	<div class="word-cloud">
-		<div ng-repeat="tag in displayedHashtags" style="display: inline-block;">
-			<!-- {{ Math.round(tag.score * 10 / maxScore) }}
-			{{ '' + round(tag.score * 10 / maxScore) + 'word' }} -->
-			<span ng-class="'{{'word' + tag.score_style}}'" style="margin: 10px;">{{tag.tag}}&nbsp;&nbsp;&nbsp;</span>
-			<!-- <div class="row" style="height: 100px">
-				<div ng-repeat="p in tag.post_urls">
-					<a ng-href="{{p.url}}" target="_blank"><img ng-src="{{p.image}}" style="display: inline-block; height: 100px; width: 100px;"></a>
-				</div>
-			</div> -->
+		<div ng-repeat="tag in displayedHashtags" style="display: inline-block;">	
+			<span ng-class="'{{'word' + tag.score_style}}'" style="margin: 10px;">{{tag.tag}}&nbsp;&nbsp;&nbsp;</span>		
 		</div>
 	<div>
 </div>

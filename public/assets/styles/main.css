@@ -106,16 +106,6 @@ img {
     transition: background-color 0.3s ease-in;
 }
 
-/*.content-b:hover, .content-g:hover, .content-y:hover {
-    background-color: transparent;
-    background-size: cover;*/
-/*    -webkit-animation: fadeIn 0.5s ease-in both;
-    -moz-animation: fadeIn 0.5s ease-in both;
-    -ms-animation: fadeIn 0.5s ease-in both;
-    -o-animation: fadeIn 0.5s ease-in both;
-    animation: fadeIn 0.5s ease-in both;*/
-
-
 #content-g, #content-y, #content-b, #content-me, #desc-g, #desc-y, #desc-b, #desc-me {
     opacity: 0;
     width: 100%;
@@ -123,7 +113,6 @@ img {
     -webkit-transition: all 0.3s;
     transition: all .3s;
     position: absolute;
-        /*#96CEB7*/
 }
 
 #desc-g  h3, #desc-g h4, #desc-g h5, {
@@ -133,11 +122,6 @@ img {
 .square-content-bottom {
     top: auto !important;
 }
-
-/*.content-g:hover .square-content-bottom, .content-b:hover .square-content-bottom, .content-y:hover .square-content-bottom {
-    opacity: 1 !important;
-    visibility: visible !important;
-}*/
 
 .overlay {
     top: 0;
@@ -153,9 +137,6 @@ img {
     background-color: rgba(0,0,0,0.15);
     height: 300px;
 }
-/*.content-g:hover .overlay, .content-b:hover .overlay, .content-y:hover .overlay {
-    background-color: rgba(255, 255, 255, 0.45);    
-}*/
 
 .fadeIn {
     -webkit-animation: fadeIn 0.5s ease-in both;
@@ -289,19 +270,6 @@ img {
         left: 20%;
     }
 }
-/*.y-image {
-    position: absolute;
-    opacity: 0;
-    background-image: url('../images/mavrck.png');  
-    top: 0;
-    left: 0;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-}
-
-.btn-main:hover .y-image {
-    opacity: 1;
-}*/
 
 /* INSTAGRAM HASHTAG */
 .ig-container {

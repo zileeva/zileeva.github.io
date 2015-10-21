@@ -1,7 +1,4 @@
-
-
-'use strict'; //? 
-
+'use strict'; 
 myApp.factory('mapG', function ($http, $rootScope) {
 	return {
 
