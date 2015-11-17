@@ -37,7 +37,7 @@ $("#eventForm").submit(function (event) {
                                 "</div>" +
 
                                 "<div class=\"row\">" + 
-                                        "<div class=\"col-xs-6\">" + 
+                                        "<div class=\"col-xs-12\">" + 
                                             "<div class=\"pull-left poster\">" + 
                                               "  <u>Posted by you</u>" + 
                                            " </div>" + 
@@ -85,7 +85,7 @@ $("#postForm").submit(function (event) {
                                 "</div>" +
 
                                 "<div class=\"row\">" + 
-                                        "<div class=\"col-xs-6\">" + 
+                                        "<div class=\"col-xs-12\">" + 
                                             "<div class=\"pull-left poster\">" + 
                                               "  <u>Posted by you</u>" + 
                                            " </div>" + 
@@ -132,7 +132,7 @@ $("#askForm").submit(function (event) {
                                 "</div>" +
 
                                 "<div class=\"row\">" + 
-                                        "<div class=\"col-xs-6\">" + 
+                                        "<div class=\"col-xs-12\">" + 
                                             "<div class=\"pull-left poster\">" + 
                                               "  <u>Posted by you</u>" + 
                                            " </div>" + 
