@@ -1,3 +1,6 @@
+function removeParent(elem) {
+	$(elem).parent().parent().parent().remove();
+}
 $("#userForm").submit(function (event) {
 	console.log("here")
 	event.preventDefault();
@@ -8,7 +11,7 @@ $("#userForm").submit(function (event) {
 	//setTimeout(funtion() { $("#msgSent").hide(); }, 2000);
 	setTimeout(function(){
   $("#msgSent").hide();
-}, 3000);
+}, 5000);
 
 })
 $("#eventForm").submit(function (event) {
@@ -21,7 +24,7 @@ $("#eventForm").submit(function (event) {
 
 	var postTemplate = "<div class=\"col-lg-12 col-md-12\">" + 
                         "<div class=\"panel panel-event\">" +
-                            "<div class=\"panel-heading\">" +
+                            "<div class=\"panel-heading\"><div class=\"row\"><i class=\"fa fa-times pull-right\" onclick=\"removeParent(this)\" style=\"cursor: pointer;\"></i></div>" +
                                 "<div class=\"row\">" +
                                     "<div class=\"col-xs-3\">" +
                                         "<i class=\"fa fa-calendar fa-5x\"></i>" +
@@ -44,7 +47,7 @@ $("#eventForm").submit(function (event) {
                                         "</div>" + 
                                " </div>" + 
                                     
-                          "</div><a href=\"#\"><div class=\"panel-footer\"><span class=\"pull-left\">Add Comment</span><span class=\"pull-right\"><i class=\"fa fa-plus\"></i></span><div class=\"clearfix\"></div></div></a></div></div>";
+                          "</div></div></div>";
 
 
 	$("#createEvent").modal('hide');
@@ -66,7 +69,7 @@ $("#postForm").submit(function (event) {
 
 	var postTemplate = "<div class=\"col-lg-12 col-md-12\">" + 
                         "<div class=\"panel panel-post\">" +
-                            "<div class=\"panel-heading\">" +
+                            "<div class=\"panel-heading\"><div class=\"row\"><i class=\"fa fa-times pull-right\" onclick=\"removeParent(this)\" style=\"cursor: pointer;\"></i></div>" +
                                 "<div class=\"row\">" +
                                     "<div class=\"col-xs-3\">" +
                                         "<i class=\"fa fa-pencil-square-o fa-5x\"></i>" +
@@ -92,7 +95,7 @@ $("#postForm").submit(function (event) {
                                         "</div>" + 
                                " </div>" + 
                                     
-                          "</div><a href=\"#\"><div class=\"panel-footer\"><span class=\"pull-left\">Add Comment</span><span class=\"pull-right\"><i class=\"fa fa-plus\"></i></span><div class=\"clearfix\"></div></div></a></div></div>";
+                          "</div></div></div>";
 
 	$("#writePost").modal('hide')
 	$("#feed").prepend(postTemplate)
@@ -113,7 +116,7 @@ $("#askForm").submit(function (event) {
 
 	var postTemplate = "<div class=\"col-lg-12 col-md-12\">" + 
                         "<div class=\"panel panel-red\">" +
-                            "<div class=\"panel-heading\">" +
+                            "<div class=\"panel-heading\"><div class=\"row\"><i class=\"fa fa-times pull-right\" onclick=\"removeParent(this)\" style=\"cursor: pointer;\"></i></div>" +
                                 "<div class=\"row\">" +
                                     "<div class=\"col-xs-3\">" +
                                         "<i class=\"fa fa-question fa-5x\"></i>" +
@@ -139,7 +142,7 @@ $("#askForm").submit(function (event) {
                                         "</div>" + 
                                " </div>" + 
                                     
-                          "</div><a href=\"#\"><div class=\"panel-footer\"><span class=\"pull-left\">Add Comment</span><span class=\"pull-right\"><i class=\"fa fa-plus\"></i></span><div class=\"clearfix\"></div></div></a></div></div>";
+                          "</div></div></div>";
 
 	$("#askAdvice").modal('hide');
 	$("#feed").prepend(postTemplate);
@@ -149,3 +152,9 @@ $("#askForm").submit(function (event) {
 
 
 })
+
+
+// $('.nav li a').on('click', function() {
+//     $(this).parent().parent().find('.active').removeClass('active');
+//     $(this).parent().addClass('active');
+// });

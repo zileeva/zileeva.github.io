@@ -53,10 +53,10 @@
             <div class="col-md-1 col-xs-1"></div>
             <div class="col-md-10 col-xs-10">
                 <form id="eventForm" name="eventForm">
-                    <input type="text" id="eventName" name="eventName" placeholder="Event Name"> <br>
-                    <input type="text" id="dateTime" name="dateTime" placeholder="Date & Time"> <br>
-                    <input type="text" id="location" name="location" placeholder="Location"> <br>
-                    <input type="text" id="description" name="description" placeholder="Description"> <br>
+                    <input type="text" id="eventName" name="eventName" placeholder="Event Name" autocomplete="off" required> <br>
+                    <input type="text" id="dateTime" name="dateTime" placeholder="Date & Time" autocomplete="off" required> <br>
+                    <input type="text" id="location" name="location" placeholder="Location" autocomplete="off" required> <br>
+                    <input type="text" id="description" name="description" placeholder="Description" autocomplete="off" required> <br>
 
                     
                     <button type="submit" class="btn btn-primary pull-right" style="width: 100px;">Post</button>
@@ -82,8 +82,8 @@
                     <div class="col-md-1 col-xs-1"></div>
                     <div class="col-md-10 col-xs-10">
                         <form id="postForm" name="postForm">
-                            <input type="text" id="postName" name="postName" placeholder="Post Title"> <br>
-                            <textarea id="postContent" rows="10" placeholder="Post Content"></textarea>
+                            <input type="text" id="postName" name="postName" placeholder="Post Title" autocomplete="off" required> <br>
+                            <textarea id="postContent" rows="10" placeholder="Post Content" autocomplete="off" required></textarea>
                             <button type="submit" class="btn btn-primary pull-right" style="width: 100px;">Post</button>
                         </form>
                     </div>
@@ -108,8 +108,8 @@
                     <div class="col-md-1 col-xs-1"></div>
                     <div class="col-md-10 col-xs-10">
                         <form id="askForm" name="askForm">
-                            <input type="text" id="askName" name="askName" placeholder="Post Title"> <br>
-                            <textarea id="askContent" rows="10" placeholder="Ask DDA users for advice! For example: Peanut has been vomiting blue liquid all day! What should I do?"></textarea>
+                            <input type="text" id="askName" name="askName" placeholder="Post Title" autocomplete="off" required> <br>
+                            <textarea id="askContent" rows="10" placeholder="Ask DDA users for advice! For example: Peanut has been vomiting blue liquid all day! What should I do?" autocomplete="off" required></textarea>
                             <button type="submit" class="btn btn-primary pull-right" style="width: 100px;">Post</button>
                         </form>
                     </div>
@@ -130,10 +130,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Welcome Dan</a>
+                <div class="navbar-brand">Welcome Dan</div>
            
             <!-- Top Menu Items -->
-                <ul class="nav navbar-left top-nav" style="background-color: #222;">
+                <!-- <ul class="nav navbar-left top-nav" style="background-color: #222;"> -->
 
     <!--             <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope  fa-2x"></i> <b class="caret"></b></a>
@@ -197,7 +197,7 @@
                             <b class="caret"></b>
                         </a> -->
 
-                </ul>
+               <!--  </ul> -->
 
 
             </div>
@@ -246,11 +246,11 @@
 
         <div id="page-wrapper" style="padding-top: 40px">
 
-            <div class="container-fluid" style="width: 100%; margin: 0; background-color: #222;">
+            <div class="container-fluid" style="width: 100%; margin: 0; background-color: #fff;">
 
                 <!-- Page Heading -->
                 <div class="row">
-                    <div class="huge feed-title col-lg-4 page-header " style="border-bottom: none; color: #fff">
+                    <div class="huge feed-title col-lg-4 page-header " style="border-bottom: none; color: #000">
                        <h1>DDA Feed </h1> 
                     </div>                      
                         
@@ -295,13 +295,13 @@
                                 </div>
 
                             </div>
-                            <a href="#">
+                            <!-- <a href="#">
                                 <div class="panel-footer">
                                     <span class="pull-left">Add Comment</span>
                                     <span class="pull-right"><i class="fa fa-plus"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
 
@@ -333,13 +333,13 @@
                                         </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <!-- <a href="#">
                                 <div class="panel-footer">
                                     <span class="pull-left">Add Comment</span>
                                     <span class="pull-right"><i class="fa fa-plus"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
 
@@ -367,13 +367,13 @@
                                         </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <!-- <a href="#">
                                 <div class="panel-footer">
                                     <span class="pull-left">Add Comment</span>
                                     <span class="pull-right"><i class="fa fa-plus"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
 
