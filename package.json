@@ -1,0 +1,33 @@
+{
+  "name": "zileeva",
+  "version": "1.0.0",
+  "description": "Personal Webpage",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test",
+    "dev": "webpack -d --watch",
+    "build" : "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zileeva/zileeva.github.io"
+  },
+  "keywords": [
+    "web"
+  ],
+  "author": "Yulia Zileeva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zileeva/zileeva.github.io/issues"
+  },
+  "homepage": "https://github.com/zileeva/zileeva.github.io",
+  "dependencies": {
+    "babel-core": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "webpack": "^1.13.1"
+  }
+}
