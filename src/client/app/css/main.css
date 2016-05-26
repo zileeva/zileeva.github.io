@@ -1,0 +1,101 @@
+@font-face {
+  font-family: Charlevoix;
+  src: url('CharlevoixPro-FullFamily-Free/CharlevoixPro-Regular.otf');
+}
+
+@font-face {
+  font-family: Charlevoix Thin;
+  src: url('CharlevoixPro-FullFamily-Free/CharlevoixPro-Thin.otf');
+}
+
+@font-face {
+  font-family: Charlevoix Light;
+  src: url('CharlevoixPro-FullFamily-Free/CharlevoixPro-Light.otf');
+}
+
+html, body {
+  margin: 0;
+  font-family: Charlevoix Thin;
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+}
+
+h4 {
+  line-height: 1.5em;
+}
+
+.header {
+  font-weight: 100;
+  padding: 20px 85px;
+  font-size: 1.75em;
+  position: absolute;
+  width: 100%;
+}
+
+.content-wrap {
+  padding-top: 100px;
+  height: calc(100% - 100px);
+}
+
+.indicators-wrap {
+  position: absolute;
+  list-style: none;
+  top: calc(50% - 39px);
+  -webkit-padding-start: 80px;
+}
+
+.indicators-wrap li {
+  width: 80px;
+  height: 15px;
+  border-bottom: 1px solid #9896A4;
+}
+
+.indicators-wrap li.current {
+  width: 85px;
+  border-color: #F7786B;
+  transition: width 300ms;
+}
+
+.right-content {
+  width: 50%;
+  float: right;
+}
+
+.right-content h1, .right-content h4 {
+  width: 50%;
+}
+
+.divider {
+  width: 80px;
+  margin: 50px 0px;
+  border-bottom: 2px solid #9896A4;
+}
+
+.slider {
+  width: 700px;
+  height: 437px;
+  position: absolute !important;
+  right: 10%;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button.slick-arrow {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    display: inline;
+    margin: 0;
+    border: none;
+    font-size: 17px;
+}
