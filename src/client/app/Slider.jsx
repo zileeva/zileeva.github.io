@@ -15,9 +15,9 @@ var MediaSlider = React.createClass({
     return (
       <Slider {...settings} className='slider'>
         <img src='app/images/home.png' />
-        <img src='app/images/home.png' />
-        <img src='app/images/home.png' />
-        <img src='app/images/home.png' />
+        <img src='app/images/rew.png' />
+        <img src='app/images/news.png' />
+        <img src='app/images/act.png' />
       </Slider>
     );
   }

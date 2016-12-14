@@ -18,6 +18,7 @@ html, body {
   font-family: Charlevoix Thin;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,11 +35,6 @@ h4 {
   font-size: 1.75em;
   position: absolute;
   width: 100%;
-}
-
-.content-wrap {
-  padding-top: 100px;
-  height: calc(100% - 100px);
 }
 
 .indicators-wrap {
@@ -60,9 +56,17 @@ h4 {
   transition: width 300ms;
 }
 
-.right-content {
-  width: 50%;
-  float: right;
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  margin-left: 240px;
+}
+
+.right-content, .left-content {
+  flex: 1;
+  padding: 10px;
 }
 
 .right-content h1, .right-content h4 {
@@ -76,10 +80,19 @@ h4 {
 }
 
 .slider {
-  width: 700px;
-  height: 437px;
-  position: absolute !important;
-  right: 10%;
+  width: 500px;
+  height: 321px;
+}
+
+/*.slide--current-entering .entering {
+  transform: translate(0,0);
+}*/
+.slide--current .entering {
+  transform: translate(0,0);
+}
+.entering {
+  transition: transform 1.4s ease;
+  transform: translate(0,200%);
 }
 
 button {
@@ -91,6 +104,7 @@ button:focus {
 }
 
 button.slick-arrow {
+    display: inline-block !important; 
     width: 50px;
     height: 50px;
     background: #fff;

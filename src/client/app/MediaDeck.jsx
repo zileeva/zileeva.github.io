@@ -1,8 +1,8 @@
 import React from 'react';
 import Deck from 'react-slide-deck';
-import Content from './Content.jsx';
-import Media from './Media.jsx';
-
+import Contents from './Content.jsx';
+var HomeContent = Contents.HomeContent;
+var MavrckContent = Contents.MavrckContent;
 
 var MediaDeck = React.createClass({
   getInitialState: function() {
@@ -26,24 +26,17 @@ var MediaDeck = React.createClass({
       <div className="content-wrap">
         <Deck {...this.state} onSwitching={this.onSwitching} onSwitchDone={this.onSwitchDone}>
           <Deck.Slide>
-            <Content />
+            <HomeContent />
           </Deck.Slide>
           <Deck.Slide>
-            <Content />
+            <MavrckContent />
           </Deck.Slide>
-          <Deck.Slide>
-            <Content />
-          </Deck.Slide>
-          <Deck.Slide>
-            <Content />
-          </Deck.Slide>
+          
 
         </Deck>
         <ul className="indicators-wrap" onClick={this.handleClick}>
           <li className={this.state.current === 0 ? 'current' : ''}></li>
           <li className={this.state.current === 1 ? 'current' : ''}></li>
-          <li className={this.state.current === 2 ? 'current' : ''}></li>
-          <li className={this.state.current === 3 ? 'current' : ''}></li> 
         </ul>
       </div>
     );
