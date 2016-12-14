@@ -21100,11 +21100,10 @@
 	
 	var _Content2 = _interopRequireDefault(_Content);
 	
-	var _Media = __webpack_require__(/*! ./Media.jsx */ 174);
-	
-	var _Media2 = _interopRequireDefault(_Media);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var HomeContent = _Content2.default.HomeContent;
+	var MavrckContent = _Content2.default.MavrckContent;
 	
 	var MediaDeck = _react2.default.createClass({
 	  displayName: 'MediaDeck',
@@ -21135,31 +21134,19 @@
 	        _react2.default.createElement(
 	          _reactSlideDeck2.default.Slide,
 	          null,
-	          _react2.default.createElement(_Content2.default, null)
+	          _react2.default.createElement(HomeContent, null)
 	        ),
 	        _react2.default.createElement(
 	          _reactSlideDeck2.default.Slide,
 	          null,
-	          _react2.default.createElement(_Content2.default, null)
-	        ),
-	        _react2.default.createElement(
-	          _reactSlideDeck2.default.Slide,
-	          null,
-	          _react2.default.createElement(_Content2.default, null)
-	        ),
-	        _react2.default.createElement(
-	          _reactSlideDeck2.default.Slide,
-	          null,
-	          _react2.default.createElement(_Content2.default, null)
+	          _react2.default.createElement(MavrckContent, null)
 	        )
 	      ),
 	      _react2.default.createElement(
 	        'ul',
 	        { className: 'indicators-wrap', onClick: this.handleClick },
 	        _react2.default.createElement('li', { className: this.state.current === 0 ? 'current' : '' }),
-	        _react2.default.createElement('li', { className: this.state.current === 1 ? 'current' : '' }),
-	        _react2.default.createElement('li', { className: this.state.current === 2 ? 'current' : '' }),
-	        _react2.default.createElement('li', { className: this.state.current === 3 ? 'current' : '' })
+	        _react2.default.createElement('li', { className: this.state.current === 1 ? 'current' : '' })
 	      )
 	    );
 	  }
@@ -22941,10 +22928,6 @@
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
 	var _react = __webpack_require__(/*! react */ 1);
 	
 	var _react2 = _interopRequireDefault(_react);
@@ -22959,8 +22942,29 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var Content = _react2.default.createClass({
-	  displayName: 'Content',
+	var HomeContent = _react2.default.createClass({
+	  displayName: 'HomeContent',
+	
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'content' },
+	      _react2.default.createElement('div', { className: 'left-content' }),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'right-content' },
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Hello! I am Yulia.'
+	        )
+	      )
+	    );
+	  }
+	});
+	
+	var MavrckContent = _react2.default.createClass({
+	  displayName: 'MavrckContent',
 	
 	  render: function render() {
 	    return _react2.default.createElement(
@@ -22968,24 +22972,26 @@
 	      { className: 'content' },
 	      _react2.default.createElement(
 	        'div',
+	        { className: 'left-content' },
+	        _react2.default.createElement(_Slider2.default, null)
+	      ),
+	      _react2.default.createElement(
+	        'div',
 	        { className: 'right-content' },
 	        _react2.default.createElement(
 	          'h1',
 	          null,
-	          'Hello! I\'m Yulia, web designer & developer.'
-	        ),
-	        _react2.default.createElement('div', { className: 'divider' }),
-	        _react2.default.createElement(
-	          'h4',
-	          null,
-	          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget turpis eu ligula semper vehicula quis et ante. Mauris ac nunc arcu. Etiam accumsan pulvinar mi, in porttitor turpis congue non. Curabitur et magna ac turpis congue tincidunt. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+	          'I work at Mavrck'
 	        )
 	      )
 	    );
 	  }
 	});
 	
-	exports.default = Content;
+	module.exports = {
+	  HomeContent: HomeContent,
+	  MavrckContent: MavrckContent
+	};
 
 /***/ },
 /* 174 */
@@ -23010,7 +23016,7 @@
 	  displayName: 'Media',
 	
 	  render: function render() {
-	    return _react2.default.createElement('img', { src: this.props.src, width: this.props.width });
+	    return _react2.default.createElement('img', { src: this.props.src, width: this.props.width, className: 'abs' });
 	  }
 	});
 	
@@ -23058,9 +23064,9 @@
 	      _reactSlick2.default,
 	      _extends({}, settings, { className: 'slider' }),
 	      _react2.default.createElement('img', { src: 'app/images/home.png' }),
-	      _react2.default.createElement('img', { src: 'app/images/home.png' }),
-	      _react2.default.createElement('img', { src: 'app/images/home.png' }),
-	      _react2.default.createElement('img', { src: 'app/images/home.png' })
+	      _react2.default.createElement('img', { src: 'app/images/rew.png' }),
+	      _react2.default.createElement('img', { src: 'app/images/news.png' }),
+	      _react2.default.createElement('img', { src: 'app/images/act.png' })
 	    );
 	  }
 	});
