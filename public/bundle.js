@@ -67,7 +67,7 @@
 	
 	var _MediaDeck2 = _interopRequireDefault(_MediaDeck);
 	
-	var _Mavrck = __webpack_require__(/*! ./Mavrck/Mavrck.jsx */ 235);
+	var _Mavrck = __webpack_require__(/*! ./Mavrck/Mavrck.jsx */ 257);
 	
 	var _Mavrck2 = _interopRequireDefault(_Mavrck);
 	
@@ -26764,7 +26764,7 @@
 	  render: function render() {
 	    return _react2.default.createElement(
 	      "div",
-	      { className: "header" },
+	      { className: "header row align-center" },
 	      _react2.default.createElement(
 	        "p",
 	        null,
@@ -28635,11 +28635,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Media = __webpack_require__(/*! ./Media.jsx */ 236);
+	var _Media = __webpack_require__(/*! ./Media.jsx */ 235);
 	
 	var _Media2 = _interopRequireDefault(_Media);
 	
-	var _Slider = __webpack_require__(/*! ./Slider.jsx */ 237);
+	var _Slider = __webpack_require__(/*! ./Slider.jsx */ 236);
 	
 	var _Slider2 = _interopRequireDefault(_Slider);
 	
@@ -28678,17 +28678,44 @@
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'left-content' },
-	        _react2.default.createElement('img', { src: 'app/images/yulia.jpg', width: '500' })
+	        _react2.default.createElement('img', { src: 'app/images/yulia_3.jpg' })
 	      ),
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'right-content' },
 	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Hello! I am Yulia.'
+	          'div',
+	          { className: 'section-label' },
+	          'hello i am'
 	        ),
-	        socialEls
+	        _react2.default.createElement(
+	          'h1',
+	          { className: 'section-header' },
+	          'Yulia',
+	          _react2.default.createElement('br', null),
+	          'Web Developer'
+	        ),
+	        _react2.default.createElement('div', { className: 'section-divider' }),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'section-description' },
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Experience in web development focusing on user interaction and user experience. Currently working as a full stack developer at ',
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'https://mavrck.co', target: '_blank' },
+	              'Mavrck'
+	            ),
+	            '.'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          socialEls
+	        )
 	      )
 	    );
 	  }
@@ -28704,44 +28731,77 @@
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'left-content' },
-	        _react2.default.createElement(_Slider2.default, null)
+	        _react2.default.createElement('img', { src: 'app/images/long_home.png' })
 	      ),
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'right-content' },
 	        _react2.default.createElement(
+	          'div',
+	          { className: 'section-label' },
+	          'latest works'
+	        ),
+	        _react2.default.createElement(
 	          'h1',
-	          null,
-	          'I am a full stack developer at ',
+	          { className: 'section-header' },
+	          'Mavrck\'s',
+	          _react2.default.createElement('br', null),
+	          'Influencer Program'
+	        ),
+	        _react2.default.createElement('div', { className: 'section-divider' }),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'section-description' },
 	          _react2.default.createElement(
-	            'a',
-	            { href: 'http://www.mavrck.co/', target: '_blank' },
-	            'Mavrck'
-	          ),
-	          ', influencer marketing startup.'
+	            'p',
+	            null,
+	            'Worked on front-end and back-end implementation of the platform for the brand\'s influencers, as well as its design.'
+	          )
 	        ),
 	        _react2.default.createElement(
-	          'label',
-	          { className: 'label-inline' },
-	          'AngularJS'
-	        ),
-	        _react2.default.createElement(
-	          'label',
-	          { className: 'label-inline' },
-	          'Node.js'
-	        ),
-	        _react2.default.createElement(
-	          'label',
-	          { className: 'label-inline' },
-	          'HTML5'
-	        ),
-	        _react2.default.createElement(
-	          'label',
-	          { className: 'label-inline' },
-	          'CSS3'
+	          'div',
+	          { className: 'row m-20-0' },
+	          _react2.default.createElement(
+	            'b',
+	            null,
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'm-10-10-10-0' },
+	              'AngularJS'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'm-10-10-10-0' },
+	              'Node.js'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'm-10-10-10-0' },
+	              'HTML5'
+	            ),
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'm-10-10-10-0' },
+	              'CSS3'
+	            )
+	          )
 	        )
 	      )
-	    );
+	    )
+	
+	    /*<div className='content'>
+	      <div className='row align-center'>
+	        <div className='column item-2'>
+	          <MediaSlider />
+	        </div>
+	        <div className='column item-1'>
+	          <h1>Influencer Program</h1>
+	          <div className='divider'></div>
+	          <p>Full Stack Developer at <a href='https://mavrck.co' target='_blank'>Mavrck</a>.</p>
+	        </div>
+	      </div>
+	    </div>*/
+	    ;
 	  }
 	});
 	
@@ -28752,78 +28812,6 @@
 
 /***/ },
 /* 235 */
-/*!******************************************!*\
-  !*** ./src/client/app/Mavrck/Mavrck.jsx ***!
-  \******************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRouter = __webpack_require__(/*! react-router */ 168);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var MavrckPage = _react2.default.createClass({
-	  displayName: 'MavrckPage',
-	
-	  render: function render() {
-	    console.log(this.props.location);
-	    var queryParams = this.props.location.query;
-	    if (!queryParams.beer1 && !queryParams.beer2) {
-	      var fuckedUp = true;
-	    }
-	    return _react2.default.createElement(
-	      'div',
-	      { className: 'mavrck flex-column' },
-	      _react2.default.createElement('div', { className: 'mavrck-overlay' }),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'flex-item-1' },
-	        _react2.default.createElement(
-	          'h1',
-	          { className: 'huge' },
-	          'Today we drink at Mavrck'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'flex-item-1' },
-	        fuckedUp ? _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Nothing. You fucked up.'
-	        ) : _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            queryParams.beer1
-	          ),
-	          'and',
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            queryParams.beer2
-	          )
-	        )
-	      )
-	    );
-	  }
-	});
-	
-	exports.default = MavrckPage;
-
-/***/ },
-/* 236 */
 /*!**********************************!*\
   !*** ./src/client/app/Media.jsx ***!
   \**********************************/
@@ -28852,7 +28840,7 @@
 	exports.default = Media;
 
 /***/ },
-/* 237 */
+/* 236 */
 /*!***********************************!*\
   !*** ./src/client/app/Slider.jsx ***!
   \***********************************/
@@ -28870,7 +28858,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactSlick = __webpack_require__(/*! react-slick */ 238);
+	var _reactSlick = __webpack_require__(/*! react-slick */ 237);
 	
 	var _reactSlick2 = _interopRequireDefault(_reactSlick);
 	
@@ -28927,7 +28915,7 @@
 	exports.default = MediaSlider;
 
 /***/ },
-/* 238 */
+/* 237 */
 /*!************************************!*\
   !*** ./~/react-slick/lib/index.js ***!
   \************************************/
@@ -28935,10 +28923,10 @@
 
 	'use strict';
 	
-	module.exports = __webpack_require__(/*! ./slider */ 239);
+	module.exports = __webpack_require__(/*! ./slider */ 238);
 
 /***/ },
-/* 239 */
+/* 238 */
 /*!*************************************!*\
   !*** ./~/react-slick/lib/slider.js ***!
   \*************************************/
@@ -28952,21 +28940,21 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _innerSlider = __webpack_require__(/*! ./inner-slider */ 240);
+	var _innerSlider = __webpack_require__(/*! ./inner-slider */ 239);
 	
-	var _objectAssign = __webpack_require__(/*! object-assign */ 246);
+	var _objectAssign = __webpack_require__(/*! object-assign */ 245);
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _json2mq = __webpack_require__(/*! json2mq */ 253);
+	var _json2mq = __webpack_require__(/*! json2mq */ 252);
 	
 	var _json2mq2 = _interopRequireDefault(_json2mq);
 	
-	var _reactResponsiveMixin = __webpack_require__(/*! react-responsive-mixin */ 255);
+	var _reactResponsiveMixin = __webpack_require__(/*! react-responsive-mixin */ 254);
 	
 	var _reactResponsiveMixin2 = _interopRequireDefault(_reactResponsiveMixin);
 	
-	var _defaultProps = __webpack_require__(/*! ./default-props */ 248);
+	var _defaultProps = __webpack_require__(/*! ./default-props */ 247);
 	
 	var _defaultProps2 = _interopRequireDefault(_defaultProps);
 	
@@ -29043,7 +29031,7 @@
 	module.exports = Slider;
 
 /***/ },
-/* 240 */
+/* 239 */
 /*!*******************************************!*\
   !*** ./~/react-slick/lib/inner-slider.js ***!
   \*******************************************/
@@ -29063,31 +29051,31 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _mixinsEventHandlers = __webpack_require__(/*! ./mixins/event-handlers */ 241);
+	var _mixinsEventHandlers = __webpack_require__(/*! ./mixins/event-handlers */ 240);
 	
 	var _mixinsEventHandlers2 = _interopRequireDefault(_mixinsEventHandlers);
 	
-	var _mixinsHelpers = __webpack_require__(/*! ./mixins/helpers */ 244);
+	var _mixinsHelpers = __webpack_require__(/*! ./mixins/helpers */ 243);
 	
 	var _mixinsHelpers2 = _interopRequireDefault(_mixinsHelpers);
 	
-	var _initialState = __webpack_require__(/*! ./initial-state */ 247);
+	var _initialState = __webpack_require__(/*! ./initial-state */ 246);
 	
 	var _initialState2 = _interopRequireDefault(_initialState);
 	
-	var _defaultProps = __webpack_require__(/*! ./default-props */ 248);
+	var _defaultProps = __webpack_require__(/*! ./default-props */ 247);
 	
 	var _defaultProps2 = _interopRequireDefault(_defaultProps);
 	
-	var _classnames = __webpack_require__(/*! classnames */ 249);
+	var _classnames = __webpack_require__(/*! classnames */ 248);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _track = __webpack_require__(/*! ./track */ 250);
+	var _track = __webpack_require__(/*! ./track */ 249);
 	
-	var _dots = __webpack_require__(/*! ./dots */ 251);
+	var _dots = __webpack_require__(/*! ./dots */ 250);
 	
-	var _arrows = __webpack_require__(/*! ./arrows */ 252);
+	var _arrows = __webpack_require__(/*! ./arrows */ 251);
 	
 	var InnerSlider = _react2['default'].createClass({
 	  displayName: 'InnerSlider',
@@ -29240,7 +29228,7 @@
 	exports.InnerSlider = InnerSlider;
 
 /***/ },
-/* 241 */
+/* 240 */
 /*!****************************************************!*\
   !*** ./~/react-slick/lib/mixins/event-handlers.js ***!
   \****************************************************/
@@ -29253,13 +29241,13 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _trackHelper = __webpack_require__(/*! ./trackHelper */ 242);
+	var _trackHelper = __webpack_require__(/*! ./trackHelper */ 241);
 	
-	var _helpers = __webpack_require__(/*! ./helpers */ 244);
+	var _helpers = __webpack_require__(/*! ./helpers */ 243);
 	
 	var _helpers2 = _interopRequireDefault(_helpers);
 	
-	var _objectAssign = __webpack_require__(/*! object-assign */ 246);
+	var _objectAssign = __webpack_require__(/*! object-assign */ 245);
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
@@ -29432,7 +29420,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 242 */
+/* 241 */
 /*!*************************************************!*\
   !*** ./~/react-slick/lib/mixins/trackHelper.js ***!
   \*************************************************/
@@ -29445,7 +29433,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _ReactDOM = __webpack_require__(/*! ./ReactDOM */ 243);
+	var _ReactDOM = __webpack_require__(/*! ./ReactDOM */ 242);
 	
 	var _ReactDOM2 = _interopRequireDefault(_ReactDOM);
 	
@@ -29561,7 +29549,7 @@
 	exports.getTrackLeft = getTrackLeft;
 
 /***/ },
-/* 243 */
+/* 242 */
 /*!**********************************************!*\
   !*** ./~/react-slick/lib/mixins/ReactDOM.js ***!
   \**********************************************/
@@ -29589,7 +29577,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 244 */
+/* 243 */
 /*!*********************************************!*\
   !*** ./~/react-slick/lib/mixins/helpers.js ***!
   \*********************************************/
@@ -29607,17 +29595,17 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ReactDOM = __webpack_require__(/*! ./ReactDOM */ 243);
+	var _ReactDOM = __webpack_require__(/*! ./ReactDOM */ 242);
 	
 	var _ReactDOM2 = _interopRequireDefault(_ReactDOM);
 	
-	var _reactLibReactTransitionEvents = __webpack_require__(/*! react/lib/ReactTransitionEvents */ 245);
+	var _reactLibReactTransitionEvents = __webpack_require__(/*! react/lib/ReactTransitionEvents */ 244);
 	
 	var _reactLibReactTransitionEvents2 = _interopRequireDefault(_reactLibReactTransitionEvents);
 	
-	var _trackHelper = __webpack_require__(/*! ./trackHelper */ 242);
+	var _trackHelper = __webpack_require__(/*! ./trackHelper */ 241);
 	
-	var _objectAssign = __webpack_require__(/*! object-assign */ 246);
+	var _objectAssign = __webpack_require__(/*! object-assign */ 245);
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
@@ -29893,7 +29881,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 245 */
+/* 244 */
 /*!**********************************************!*\
   !*** ./~/react/lib/ReactTransitionEvents.js ***!
   \**********************************************/
@@ -29974,7 +29962,7 @@
 	module.exports = ReactTransitionEvents;
 
 /***/ },
-/* 246 */
+/* 245 */
 /*!************************************************!*\
   !*** ./~/react-slick/~/object-assign/index.js ***!
   \************************************************/
@@ -30009,7 +29997,7 @@
 
 
 /***/ },
-/* 247 */
+/* 246 */
 /*!********************************************!*\
   !*** ./~/react-slick/lib/initial-state.js ***!
   \********************************************/
@@ -30062,7 +30050,7 @@
 	module.exports = initialState;
 
 /***/ },
-/* 248 */
+/* 247 */
 /*!********************************************!*\
   !*** ./~/react-slick/lib/default-props.js ***!
   \********************************************/
@@ -30118,7 +30106,7 @@
 	module.exports = defaultProps;
 
 /***/ },
-/* 249 */
+/* 248 */
 /*!*********************************************!*\
   !*** ./~/react-slick/~/classnames/index.js ***!
   \*********************************************/
@@ -30175,7 +30163,7 @@
 
 
 /***/ },
-/* 250 */
+/* 249 */
 /*!************************************!*\
   !*** ./~/react-slick/lib/track.js ***!
   \************************************/
@@ -30193,11 +30181,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _objectAssign = __webpack_require__(/*! object-assign */ 246);
+	var _objectAssign = __webpack_require__(/*! object-assign */ 245);
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _classnames = __webpack_require__(/*! classnames */ 249);
+	var _classnames = __webpack_require__(/*! classnames */ 248);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -30331,7 +30319,7 @@
 	exports.Track = Track;
 
 /***/ },
-/* 251 */
+/* 250 */
 /*!***********************************!*\
   !*** ./~/react-slick/lib/dots.js ***!
   \***********************************/
@@ -30349,7 +30337,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(/*! classnames */ 249);
+	var _classnames = __webpack_require__(/*! classnames */ 248);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -30413,7 +30401,7 @@
 	exports.Dots = Dots;
 
 /***/ },
-/* 252 */
+/* 251 */
 /*!*************************************!*\
   !*** ./~/react-slick/lib/arrows.js ***!
   \*************************************/
@@ -30433,7 +30421,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _classnames = __webpack_require__(/*! classnames */ 249);
+	var _classnames = __webpack_require__(/*! classnames */ 248);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
@@ -30531,13 +30519,13 @@
 	exports.NextArrow = NextArrow;
 
 /***/ },
-/* 253 */
+/* 252 */
 /*!******************************************!*\
   !*** ./~/react-slick/~/json2mq/index.js ***!
   \******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var camel2hyphen = __webpack_require__(/*! string-convert/camel2hyphen */ 254);
+	var camel2hyphen = __webpack_require__(/*! string-convert/camel2hyphen */ 253);
 	
 	var isDimension = function (feature) {
 	  var re = /[height|width]$/;
@@ -30590,7 +30578,7 @@
 	module.exports = json2mq;
 
 /***/ },
-/* 254 */
+/* 253 */
 /*!******************************************************************!*\
   !*** ./~/react-slick/~/json2mq/~/string-convert/camel2hyphen.js ***!
   \******************************************************************/
@@ -30607,15 +30595,15 @@
 	module.exports = camel2hyphen;
 
 /***/ },
-/* 255 */
+/* 254 */
 /*!*********************************************************!*\
   !*** ./~/react-slick/~/react-responsive-mixin/index.js ***!
   \*********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var canUseDOM = __webpack_require__(/*! can-use-dom */ 256);
-	var enquire = canUseDOM && __webpack_require__(/*! enquire.js */ 257);
-	var json2mq = __webpack_require__(/*! json2mq */ 253);
+	var canUseDOM = __webpack_require__(/*! can-use-dom */ 255);
+	var enquire = canUseDOM && __webpack_require__(/*! enquire.js */ 256);
+	var json2mq = __webpack_require__(/*! json2mq */ 252);
 	
 	var ResponsiveMixin = {
 	  media: function (query, handler) {
@@ -30645,7 +30633,7 @@
 	module.exports = ResponsiveMixin;
 
 /***/ },
-/* 256 */
+/* 255 */
 /*!***********************************************************************!*\
   !*** ./~/react-slick/~/react-responsive-mixin/~/can-use-dom/index.js ***!
   \***********************************************************************/
@@ -30660,7 +30648,7 @@
 	module.exports = canUseDOM;
 
 /***/ },
-/* 257 */
+/* 256 */
 /*!*****************************************************************************!*\
   !*** ./~/react-slick/~/react-responsive-mixin/~/enquire.js/dist/enquire.js ***!
   \*****************************************************************************/
@@ -30959,6 +30947,78 @@
 		return new MediaQueryDispatch();
 	
 	}));
+
+/***/ },
+/* 257 */
+/*!******************************************!*\
+  !*** ./src/client/app/Mavrck/Mavrck.jsx ***!
+  \******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 168);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var MavrckPage = _react2.default.createClass({
+	  displayName: 'MavrckPage',
+	
+	  render: function render() {
+	    console.log(this.props.location);
+	    var queryParams = this.props.location.query;
+	    if (!queryParams.beer1 && !queryParams.beer2) {
+	      var fuckedUp = true;
+	    }
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'mavrck flex-column' },
+	      _react2.default.createElement('div', { className: 'mavrck-overlay' }),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'flex-item-1' },
+	        _react2.default.createElement(
+	          'h1',
+	          { className: 'huge' },
+	          'Today we drink at Mavrck'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'flex-item-1' },
+	        fuckedUp ? _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Nothing. You fucked up.'
+	        ) : _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            queryParams.beer1
+	          ),
+	          'and',
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            queryParams.beer2
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
+	
+	exports.default = MavrckPage;
 
 /***/ }
 /******/ ]);

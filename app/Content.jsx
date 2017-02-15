@@ -30,11 +30,24 @@ var HomeContent = React.createClass({
     return (
       <div className='content'>
         <div className='left-content'>
-          <img src='app/images/yulia.jpg' width='500' />
+          <img src='app/images/yulia_3.jpg' />
         </div>
         <div className='right-content'>
-          <h1>Hello! I am Yulia.</h1>
-          {socialEls}
+          <div className='section-label'>hello i am</div>
+          
+          <h1 className='section-header'>Yulia
+          <br></br>Web Developer</h1>
+
+          <div className='section-divider'>
+          </div>
+
+          <div className='section-description'>
+            <p>Experience in web development focusing on user interaction and user experience. 
+              Currently working as a full stack developer at <a href='https://mavrck.co' target='_blank'>Mavrck</a>.</p>
+          </div>
+
+          <div className='row'>{socialEls}</div>
+
         </div>
       </div>
     );
@@ -46,17 +59,42 @@ var MavrckContent = React.createClass({
     return (
       <div className='content'>
         <div className='left-content'>
-          <MediaSlider></MediaSlider>
+          <img src='app/images/long_home.png'/>
         </div>
         <div className='right-content'>
-          <h1>I am a full stack developer at <a href='http://www.mavrck.co/' target='_blank'>Mavrck</a>, influencer marketing startup.</h1>
-          <label className="label-inline">AngularJS</label>
-          <label className="label-inline">Node.js</label>
-          <label className="label-inline">HTML5</label>
-          <label className="label-inline">CSS3</label>
-        </div>
+          <div className='section-label'>latest works</div>
+          
+          <h1 className='section-header'>Mavrck&#39;s
+          <br></br>Influencer Program</h1>
 
+          <div className='section-divider'></div>
+
+          <div className='section-description'>
+            <p>Worked on front-end and back-end implementation of the platform for the brand&#39;s influencers, as well as its design.</p>
+          </div>
+
+          <div className='row m-20-0'>
+            <b><span className='m-10-10-10-0'>AngularJS</span>
+            <span className='m-10-10-10-0'>Node.js</span>
+            <span className='m-10-10-10-0'>HTML5</span>
+            <span className='m-10-10-10-0'>CSS3</span></b>
+          </div>
+
+        </div>
       </div>
+
+      /*<div className='content'>
+        <div className='row align-center'>
+          <div className='column item-2'>
+            <MediaSlider />
+          </div>
+          <div className='column item-1'>
+            <h1>Influencer Program</h1>
+            <div className='divider'></div>
+            <p>Full Stack Developer at <a href='https://mavrck.co' target='_blank'>Mavrck</a>.</p>
+          </div>
+        </div>
+      </div>*/
     );
   }
 });
