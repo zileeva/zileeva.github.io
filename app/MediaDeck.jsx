@@ -49,11 +49,11 @@ var MediaDeck = React.createClass({
     }));
 
     socialEls.push(languages1.map(function(s) {
-      return <span className='m-10-10-10-0'>{s}</span>
+      return <span className='bold m-10-10-10-0'>{s}</span>
     }));
 
     socialEls.push(languages2.map(function(s) {
-      return <span className='m-10-10-10-0'>{s}</span>
+      return <span className='bold m-10-10-10-0'>{s}</span>
     }));
 
     var contents = [
@@ -68,12 +68,12 @@ var MediaDeck = React.createClass({
           src: 'app/images/long_home.png',
           label: 'project 01',
           header: ['Mavrck\'s', <br></br>, 'Influencer Program'],
-          description: 'Worked on front-end and back-end implementation of the platform for the brand&#39;s influencers, as well as its design.',
+          description: 'Worked on front-end and back-end implementation of the platform for the brand\'s influencers, as well as its design.',
           links: socialEls[1]
         },
         {
           src: 'app/images/raytracer.png',
-          label: 'project 01',
+          label: 'project 02',
           header: ['Raytracer'],
           description: 'Raytracer program that generates the images by tracing the path of light through pixels in an image. Supports box, sphere, cylinder, and cone shapes, phong shading, textures, shadows, reflections, and refractions.',
           links: socialEls[2]

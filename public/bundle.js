@@ -26856,7 +26856,7 @@
 	    socialEls.push(languages1.map(function (s) {
 	      return _react2.default.createElement(
 	        'span',
-	        { className: 'm-10-10-10-0' },
+	        { className: 'bold m-10-10-10-0' },
 	        s
 	      );
 	    }));
@@ -26864,7 +26864,7 @@
 	    socialEls.push(languages2.map(function (s) {
 	      return _react2.default.createElement(
 	        'span',
-	        { className: 'm-10-10-10-0' },
+	        { className: 'bold m-10-10-10-0' },
 	        s
 	      );
 	    }));
@@ -26883,11 +26883,11 @@
 	      src: 'app/images/long_home.png',
 	      label: 'project 01',
 	      header: ['Mavrck\'s', _react2.default.createElement('br', null), 'Influencer Program'],
-	      description: 'Worked on front-end and back-end implementation of the platform for the brand&#39;s influencers, as well as its design.',
+	      description: 'Worked on front-end and back-end implementation of the platform for the brand\'s influencers, as well as its design.',
 	      links: socialEls[1]
 	    }, {
 	      src: 'app/images/raytracer.png',
-	      label: 'project 01',
+	      label: 'project 02',
 	      header: ['Raytracer'],
 	      description: 'Raytracer program that generates the images by tracing the path of light through pixels in an image. Supports box, sphere, cylinder, and cone shapes, phong shading, textures, shadows, reflections, and refractions.',
 	      links: socialEls[2]
@@ -28748,7 +28748,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'row' },
+	          { className: 'row justify-end m-0-85' },
 	          this.props.section.links
 	        )
 	      )
@@ -30930,44 +30930,75 @@
 	    }
 	    return _react2.default.createElement(
 	      'div',
-	      { className: 'mavrck flex-column' },
-	      _react2.default.createElement('div', { className: 'mavrck-overlay' }),
+	      { className: 'mavrck column justify-between' },
 	      _react2.default.createElement(
 	        'div',
-	        { className: 'flex-item-1' },
+	        { className: 'row justify-between p-85' },
 	        _react2.default.createElement(
 	          'h1',
-	          { className: 'huge' },
-	          'Today we drink at Mavrck'
+	          { className: 'bold' },
+	          _react2.default.createElement('img', { width: '50', src: 'app/images/mvk.png' })
+	        ),
+	        _react2.default.createElement(
+	          'h1',
+	          { className: 'bold' },
+	          'M'
 	        )
 	      ),
 	      _react2.default.createElement(
 	        'div',
-	        { className: 'flex-item-1' },
-	        fuckedUp ? _react2.default.createElement(
+	        { className: 'column align-center' },
+	        _react2.default.createElement(
 	          'h1',
 	          null,
-	          'Nothing. You fucked up.'
-	        ) : _react2.default.createElement(
+	          'Today we drink ',
+	          queryParams.beer1,
+	          ' and ',
+	          queryParams.beer2,
+	          '.'
+	        ),
+	        _react2.default.createElement('div', { className: 'divider' }),
+	        _react2.default.createElement(
 	          'div',
-	          null,
+	          { className: 'row' },
 	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            queryParams.beer1
+	            'a',
+	            { href: 'https://www.instagram.com/mavrckco/', target: '_blank' },
+	            _react2.default.createElement('i', { className: 'ion ion-social-instagram' })
 	          ),
-	          'and',
 	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            queryParams.beer2
+	            'a',
+	            { href: 'https://www.facebook.com/MavrckCo/', target: '_blank' },
+	            _react2.default.createElement('i', { className: 'ion ion-social-facebook' })
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://www.twitter.com/MavrckCo', target: '_blank' },
+	            _react2.default.createElement('i', { className: 'ion ion-social-twitter' })
 	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'row justify-between p-85' },
+	        _react2.default.createElement(
+	          'h1',
+	          { className: 'bold' },
+	          'K'
+	        ),
+	        _react2.default.createElement(
+	          'h1',
+	          { className: 'bold' },
+	          'V'
 	        )
 	      )
 	    );
 	  }
 	});
 	
+	/*<div className='flex-item-1'>
+	          {fuckedUp ? (<h1>Nothing. You fucked up.</h1>) : (<div><h1>{queryParams.beer1}</h1>and<h1>{queryParams.beer2}</h1></div>)}
+	        </div>*/
 	exports.default = MavrckPage;
 
 /***/ }

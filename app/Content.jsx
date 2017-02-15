@@ -17,7 +17,7 @@ var Content = React.createClass({
               <div className='section-description'>
                 <p>{this.props.section.description}</p>
               </div>
-              <div className='row'>{this.props.section.links}</div>
+              <div className='row justify-end m-0-85'>{this.props.section.links}</div>
             </div>
           </div>
       );
