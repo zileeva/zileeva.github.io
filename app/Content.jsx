@@ -12,18 +12,12 @@ var Content = React.createClass({
             </div>
             <div className='right-content column justify-around'>
               <div className='section-label'>{this.props.section.label}</div>
-              
               <h1 className='section-header'>{this.props.section.header}</h1>
-
-              <div className='section-divider'>
-              </div>
-
+              <div className='section-divider'></div>
               <div className='section-description'>
                 <p>{this.props.section.description}</p>
               </div>
-
               <div className='row'>{this.props.section.links}</div>
-
             </div>
           </div>
       );
