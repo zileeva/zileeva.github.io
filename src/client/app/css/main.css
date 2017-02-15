@@ -57,7 +57,7 @@ label {
 
 .header {
   font-weight: 100;
-  padding: 20px 85px;
+  padding: 29px 105px;
   font-size: 1.75em;
   position: absolute;
 }
@@ -67,12 +67,6 @@ label {
   margin-right: 20px;
 }
 
-.hero-img {
-  border-bottom: 8px solid #9896A4;
-  border-right: 8px solid #9896A4;
-  border-left: 8px solid #9896A4;
-
-}
 
 .indicators-wrap {
   position: absolute;
@@ -84,7 +78,7 @@ label {
 .indicators-wrap li {
   width: 80px;
   height: 15px;
-  border-bottom: 1px solid #9896A4;
+  border-bottom: 1px solid #000;
 }
 
 .indicators-wrap li.current {
@@ -99,7 +93,7 @@ label {
   align-items: center;
   height: 100%;
   margin-left: 240px;
-  margin-right: 85px;
+  /*margin-right: 85px;*/
 }
 
 .mavrck {
@@ -152,6 +146,10 @@ label {
   justify-content: center;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .item-1 {
   flex: 1;
 }
@@ -187,21 +185,22 @@ label {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 600;
-  margin-left: -130px;
-  margin-top: 50px;
+  /*margin-left: -130px;*/
+  /*margin-top: 50px;*/
   color: #F7786B;
 }
 
 .section-header {
-  margin-left: -130px;
-  margin-top: 50px;
+  /*margin-left: -130px;*/
+  /*margin-top: 50px;*/
   font-size: 56px;
   font-weight: 700;
 }
 
 .section-divider {
-  border-top: 2px solid #9896A4;
-  margin: 150px 0px 50px 200px;
+  border-top: 2px solid #000; /*9896A4*/
+  margin-left: 200px;
+  margin-top: 80px;
 }
 
 .section-description {
@@ -227,7 +226,7 @@ label {
 .divider {
   width: 80px;
   margin: 50px 0px;
-  border-bottom: 2px solid #9896A4;
+  border-bottom: 2px solid #000;
 }
 
 .slider {
@@ -259,7 +258,7 @@ label {
 
 .label-inline {
   margin: 20px 20px 20px 0px;
-  color: #9896a4;
+  color: #000;
 }
 
 

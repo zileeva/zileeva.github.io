@@ -26805,8 +26805,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var HomeContent = _Content2.default.HomeContent;
-	var MavrckContent = _Content2.default.MavrckContent;
+	var Content = _Content2.default.Content;
 	
 	var MediaDeck = _react2.default.createClass({
 	  displayName: 'MediaDeck',
@@ -26828,28 +26827,94 @@
 	    this.setState({ index: state.current });
 	  },
 	  render: function render() {
+	
+	    var social = [{
+	      name: 'instagram',
+	      icon: 'ion social ion-social-instagram',
+	      url: 'https://www.instagram.com/zileeva/'
+	    }, {
+	      name: 'facebook',
+	      icon: 'ion social ion-social-facebook',
+	      url: 'https://www.facebook.com/julia.zileeva'
+	    }, {
+	      name: 'linkedin',
+	      icon: 'ion social ion-social-linkedin-outline',
+	      url: 'https://www.linkedin.com/in/yuliazileeva'
+	    }];
+	    var languages1 = ['AngularJS', 'Node.js', 'HTML5', 'CSS3'];
+	    var languages2 = ['Java', 'OpenGL'];
+	
+	    var socialEls = [];
+	    socialEls.push(social.map(function (s) {
+	      return _react2.default.createElement(
+	        'a',
+	        { href: s.url, target: '_blank' },
+	        _react2.default.createElement('i', { className: s.icon })
+	      );
+	    }));
+	
+	    socialEls.push(languages1.map(function (s) {
+	      return _react2.default.createElement(
+	        'span',
+	        { className: 'm-10-10-10-0' },
+	        s
+	      );
+	    }));
+	
+	    socialEls.push(languages2.map(function (s) {
+	      return _react2.default.createElement(
+	        'span',
+	        { className: 'm-10-10-10-0' },
+	        s
+	      );
+	    }));
+	
+	    var contents = [{
+	      src: 'app/images/yulia_3.jpg',
+	      label: 'hello i am',
+	      header: ['Yulia', _react2.default.createElement('br', null), 'Web Developer'],
+	      description: ['Experience in web development focusing on user interaction and user experience. Currently working as a full stack developer at ', _react2.default.createElement(
+	        'a',
+	        { href: 'http://mavrck.co', target: '_blank' },
+	        'Mavrck'
+	      ), '.'],
+	      links: socialEls[0]
+	    }, {
+	      src: 'app/images/long_home.png',
+	      label: 'project 01',
+	      header: ['Mavrck\'s', _react2.default.createElement('br', null), 'Influencer Program'],
+	      description: 'Worked on front-end and back-end implementation of the platform for the brand&#39;s influencers, as well as its design.',
+	      links: socialEls[1]
+	    }, {
+	      src: 'app/images/raytracer.png',
+	      label: 'project 01',
+	      header: ['Raytracer'],
+	      description: 'Raytracer program that generates the images by tracing the path of light through pixels in an image. Supports box, sphere, cylinder, and cone shapes, phong shading, textures, shadows, reflections, and refractions.',
+	      links: socialEls[2]
+	    }];
+	
+	    var slides = contents.map(function (section, index) {
+	      return _react2.default.createElement(
+	        _reactSlideDeck2.default.Slide,
+	        { key: index },
+	        _react2.default.createElement(Content, { section: section })
+	      );
+	    });
+	
 	    return _react2.default.createElement(
 	      'div',
 	      { className: 'content-wrap' },
 	      _react2.default.createElement(
 	        _reactSlideDeck2.default,
 	        _extends({}, this.state, { onSwitching: this.onSwitching, onSwitchDone: this.onSwitchDone }),
-	        _react2.default.createElement(
-	          _reactSlideDeck2.default.Slide,
-	          null,
-	          _react2.default.createElement(HomeContent, null)
-	        ),
-	        _react2.default.createElement(
-	          _reactSlideDeck2.default.Slide,
-	          null,
-	          _react2.default.createElement(MavrckContent, null)
-	        )
+	        slides
 	      ),
 	      _react2.default.createElement(
 	        'ul',
 	        { className: 'indicators-wrap', onClick: this.handleClick },
 	        _react2.default.createElement('li', { className: this.state.current === 0 ? 'current' : '' }),
-	        _react2.default.createElement('li', { className: this.state.current === 1 ? 'current' : '' })
+	        _react2.default.createElement('li', { className: this.state.current === 1 ? 'current' : '' }),
+	        _react2.default.createElement('li', { className: this.state.current === 2 ? 'current' : '' })
 	      )
 	    );
 	  }
@@ -28645,32 +28710,10 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var HomeContent = _react2.default.createClass({
-	  displayName: 'HomeContent',
+	var Content = _react2.default.createClass({
+	  displayName: 'Content',
 	
 	  render: function render() {
-	
-	    var social = [{
-	      name: 'instagram',
-	      icon: 'ion social ion-social-instagram',
-	      url: 'https://www.instagram.com/zileeva/'
-	    }, {
-	      name: 'facebook',
-	      icon: 'ion social ion-social-facebook',
-	      url: 'https://www.facebook.com/julia.zileeva'
-	    }, {
-	      name: 'linkedin',
-	      icon: 'ion social ion-social-linkedin-outline',
-	      url: 'https://www.linkedin.com/in/yuliazileeva'
-	    }];
-	
-	    var socialEls = social.map(function (s) {
-	      return _react2.default.createElement(
-	        'a',
-	        { href: s.url, target: '_blank' },
-	        _react2.default.createElement('i', { className: s.icon })
-	      );
-	    });
 	
 	    return _react2.default.createElement(
 	      'div',
@@ -28678,22 +28721,20 @@
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'left-content' },
-	        _react2.default.createElement('img', { src: 'app/images/yulia_3.jpg' })
+	        _react2.default.createElement('img', { src: this.props.section.src })
 	      ),
 	      _react2.default.createElement(
 	        'div',
-	        { className: 'right-content' },
+	        { className: 'right-content column justify-around' },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'section-label' },
-	          'hello i am'
+	          this.props.section.label
 	        ),
 	        _react2.default.createElement(
 	          'h1',
 	          { className: 'section-header' },
-	          'Yulia',
-	          _react2.default.createElement('br', null),
-	          'Web Developer'
+	          this.props.section.header
 	        ),
 	        _react2.default.createElement('div', { className: 'section-divider' }),
 	        _react2.default.createElement(
@@ -28702,112 +28743,21 @@
 	          _react2.default.createElement(
 	            'p',
 	            null,
-	            'Experience in web development focusing on user interaction and user experience. Currently working as a full stack developer at ',
-	            _react2.default.createElement(
-	              'a',
-	              { href: 'https://mavrck.co', target: '_blank' },
-	              'Mavrck'
-	            ),
-	            '.'
+	            this.props.section.description
 	          )
 	        ),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'row' },
-	          socialEls
+	          this.props.section.links
 	        )
 	      )
 	    );
 	  }
 	});
 	
-	var MavrckContent = _react2.default.createClass({
-	  displayName: 'MavrckContent',
-	
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      { className: 'content' },
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'left-content' },
-	        _react2.default.createElement('img', { src: 'app/images/long_home.png' })
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'right-content' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'section-label' },
-	          'latest works'
-	        ),
-	        _react2.default.createElement(
-	          'h1',
-	          { className: 'section-header' },
-	          'Mavrck\'s',
-	          _react2.default.createElement('br', null),
-	          'Influencer Program'
-	        ),
-	        _react2.default.createElement('div', { className: 'section-divider' }),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'section-description' },
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'Worked on front-end and back-end implementation of the platform for the brand\'s influencers, as well as its design.'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'row m-20-0' },
-	          _react2.default.createElement(
-	            'b',
-	            null,
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'm-10-10-10-0' },
-	              'AngularJS'
-	            ),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'm-10-10-10-0' },
-	              'Node.js'
-	            ),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'm-10-10-10-0' },
-	              'HTML5'
-	            ),
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'm-10-10-10-0' },
-	              'CSS3'
-	            )
-	          )
-	        )
-	      )
-	    )
-	
-	    /*<div className='content'>
-	      <div className='row align-center'>
-	        <div className='column item-2'>
-	          <MediaSlider />
-	        </div>
-	        <div className='column item-1'>
-	          <h1>Influencer Program</h1>
-	          <div className='divider'></div>
-	          <p>Full Stack Developer at <a href='https://mavrck.co' target='_blank'>Mavrck</a>.</p>
-	        </div>
-	      </div>
-	    </div>*/
-	    ;
-	  }
-	});
-	
 	module.exports = {
-	  HomeContent: HomeContent,
-	  MavrckContent: MavrckContent
+	  Content: Content
 	};
 
 /***/ },
