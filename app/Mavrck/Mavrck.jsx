@@ -11,10 +11,10 @@ var MavrckPage = React.createClass({
     return (
       <div className='mavrck column justify-between'>
         <div className='row justify-between p-85'>
-          <h1 className='bold'><img width='50' src='app/images/mvk.png' /></h1>
+          <a href='http://www.mavrck.co' target='_blank'><img width='50' src='app/images/mvk.png'/></a>
           <h1 className='bold'>M</h1>
         </div>
-        <div className='column align-center'>
+        <div className='column align-center center'>
           <h1>Today we drink {queryParams.beer1} and {queryParams.beer2}.</h1>
           <div className='divider'></div>
           <div className='row'>
@@ -32,7 +32,4 @@ var MavrckPage = React.createClass({
   }
 });
 
-/*<div className='flex-item-1'>
-          {fuckedUp ? (<h1>Nothing. You fucked up.</h1>) : (<div><h1>{queryParams.beer1}</h1>and<h1>{queryParams.beer2}</h1></div>)}
-        </div>*/
 export default MavrckPage;
