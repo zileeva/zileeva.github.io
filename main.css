@@ -1,0 +1,284 @@
+
+@font-face {
+  font-family: Raleway;
+  src: url('raleway/Raleway-Regular.ttf');
+}
+
+@font-face {
+  font-family: Raleway Thin;
+  src: url('raleway/Raleway-Thin.ttf');
+}
+
+@font-face {
+  font-family: Raleway SemiBold;
+  src: url('raleway/Raleway-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: Raleway Bold;
+  src: url('raleway/Raleway-Bold.ttf');
+}
+
+html, body {
+  margin: 0;
+  font-family: Raleway;
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+}
+
+h4 {
+  line-height: 1.5em;
+}
+
+h2 {
+  margin: 0;
+}
+
+img.circle {
+  border-radius: 50%;
+}
+
+.gray, .year {
+  color: rgba(130, 130, 130, 0.31);
+}
+
+header {
+  border-bottom: 1px solid rgba(130, 130, 130, 0.31);
+  padding: 50px;
+}
+
+header h1 {
+  text-transform: uppercase;
+  letter-spacing: 2.2;
+  font-size: 56px;
+  font-weight: 700;
+}
+
+header div.container {
+  width: 680px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+main {
+  background-color: rgba(130, 130, 130, 0.15);
+}
+
+
+main div.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+main div.content {
+  padding: 50px;
+  margin: 25px 0;
+  position: relative;
+}
+
+.border-r {
+  border-right: 1px solid rgba(130, 130, 130, 0.31);
+}
+
+.separator {
+  width: 25px;
+  border-top: 1px solid rgba(130, 130, 130, 0.31);
+  right: 0;
+  position: absolute;
+}
+
+.separator-right {
+  width: 25px;
+  border-top: 1px solid rgba(130, 130, 130, 0.31);
+  left: 0;
+  position: absolute;
+}
+
+.card {
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  min-height: 270px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card > .content {
+  margin: 0 20px;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover {
+  -webkit-transform: scale(1.05, 1.05);
+  transform: scale(1.05, 1.05);
+  border-left: 3px solid #EF5350;
+}
+
+.card .year {
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover .year {
+  color: #EF5350;
+  font-family: Raleway SemiBold;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+.card h3 {
+  font-family: Raleway SemiBold;
+}
+
+
+
+.card .image {
+    background-size: cover;
+    background-position: center;
+    height: 230px;
+    margin-right: -70px;
+    margin-bottom: 20px;
+}
+
+.card .image.full {
+  height: 340px;
+}
+
+.card .image.half {
+  height: 280px;
+}
+
+.card .image.one {
+  background-image: url('images/1.jpg');
+}
+.card .image.two {
+  background-image: url('images/2.jpg');
+}
+.card .image.three {
+  background-image: url('images/3.jpeg');
+}
+.card .image.four {
+  background-image: url('images/4.jpg');
+}
+.card .image.five {
+  background-image: url('images/5.jpg');
+}
+.card .image.six {
+  background-image: url('images/6.jpg');
+}
+.card .image.seven {
+  background-image: url('images/7.jpg');
+}
+.card .image.eight {
+  background-image: url('images/8.jpg');
+}
+.card .image.nine {
+  background-image: url('images/9.jpg');
+}
+.card .image.ten {
+  background-image: url('images/10.jpg');
+}
+.card .image.ten-1 {
+  background-image: url('images/10-1.jpg');
+}
+.card .image.eleven {
+  background-image: url('images/11.jpg');
+}
+.card .image.twelve {
+  background-image: url('images/12.jpg');
+}
+.card .image.thirteen {
+  background-image: url('images/13.jpg');
+}
+.card .image.fourteen {
+  background-image: url('images/14.jpg');
+}
+
+.m-0-20 {
+  margin: 0 20px;
+}
+
+.m-80 {
+  margin-top: 80px;
+}
+
+.m-220 {
+  margin-top: 220px;
+}
+
+.m-420 {
+  margin-top: 420px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-self-top {
+  align-self: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.item-1 {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .item-1 {
+
+  }
+}
+
+.item-2 {
+  flex: 2;
+}
+
+.item-3 {
+  flex: 3;
+}
