@@ -47,7 +47,6 @@ img.circle {
 }
 
 header {
-  border-bottom: 1px solid rgba(130, 130, 130, 0.31);
   padding: 50px;
 }
 
@@ -81,19 +80,19 @@ main div.content {
 }
 
 .border-r {
-  border-right: 1px solid rgba(130, 130, 130, 0.31);
+  border-right: 2px solid rgba(130, 130, 130, 0.08);
 }
 
 .separator {
   width: 25px;
-  border-top: 1px solid rgba(130, 130, 130, 0.31);
+  border-top: 2px solid rgba(130, 130, 130, 0.08);
   right: 0;
   position: absolute;
 }
 
 .separator-right {
   width: 25px;
-  border-top: 1px solid rgba(130, 130, 130, 0.31);
+  border-top: 2px solid rgba(130, 130, 130, 0.08);
   left: 0;
   position: absolute;
 }
